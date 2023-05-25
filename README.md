@@ -1,5 +1,5 @@
 # 
-![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=02D9F7FF&size=35&center=true&vCenter=true&width=1000&lines=HELLO👋;I'm+from+VietNam;I'm+20+years+old;Welcome!)
+![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=02D9F7FF&size=35&center=true&vCenter=true&width=10000&lines=HELLO,I'from VietNam👋;My full name Dang Duy Linh ;I'm+20+years+old)
 <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
 # 📈 Statistics 
 <div align="center">  
