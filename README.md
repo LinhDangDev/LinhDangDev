@@ -13,7 +13,7 @@
   <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
 </div> 
   <h1 align="center"></h1><p align="center">
-    <img width="725em" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=lighter15723&theme=github_dark" />
+    <img width="725em" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=lighter15723&theme=radical" />
   </p>
     <p align="center">
    <img  src="https://github-readme-streak-stats.herokuapp.com?user=lighter15723&theme=tokyonight_duo&hide_border=true"
