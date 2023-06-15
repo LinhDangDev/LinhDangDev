@@ -4,8 +4,7 @@
 ![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=02D9F7FF&size=35&center=true&vCenter=true&width=1000&lines=HELLO👋;My+full+name+Dang+Duy+Linh;I'm+20+years+old;I'm+from+VietNam;Wellcome!)
 <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
 # 📈 Statistics 
-![LinhDangDev GitHub stats](https://github-readme-stats.vercel.app/api?username=LinhDangDev&theme=dark&show_icons=true) 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=LinhDangDev)](https://github.com/LinhDangDev/github-readme-stats)
+
   <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
 </div> 
   <h1 align="center"></h1><p align="center">
