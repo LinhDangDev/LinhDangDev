@@ -4,7 +4,12 @@
 ![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=02D9F7FF&size=35&center=true&vCenter=true&width=1000&lines=HELLO👋;My+full+name+Dang+Duy+Linh;I'm+20+years+old;I'm+from+VietNam;Wellcome!)
 <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
 # 📈 Statistics 
-
+[![LinhDangDev's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=LinhDangDev&bg_color=0d1117&color=ffffff&line=00b3ff&point=f9fafa&area=true&hide_border=true)](https://github.com/LinhDangDev/github-readme-activity-graph)
+<div align="center">  
+  <img width="49%" height="195px" src="https://github-readme-stats.vercel.app/api?username=LinhDangDev&show_icons=true&count_private=true&hide_border=true&title_color=02D9F7FF&icon_color=02D9F7FF&text_color=c9d1d9&bg_color=0d1117" alt="LinhDangDev github stats" /> 
+  
+  <img width="49%" height="195px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=LinhDangDev&layout=compact&hide_border=true&title_color=02D9F7FF&text_color=02D9F7FF&bg_color=0d1117" />
+</div> 
   <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
 </div> 
   <h1 align="center"></h1><p align="center">
