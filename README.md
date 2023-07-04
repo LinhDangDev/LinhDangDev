@@ -45,7 +45,7 @@ graph TD;
 <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/CSS.svg" width="48" title="CSS">   
 <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/JavaScript.svg" width="48" title="JavaScript"> 
 <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Sass.svg" width="48" title="Sass">  
-<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Bootstrap.svg" width="48">  
+
 <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Figma-Dark.svg" width="48" title="Figma">   
 <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Git.svg" width="48" title="Git">  
 <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/MongoDB.svg" width="48" title="MongoDB">    
