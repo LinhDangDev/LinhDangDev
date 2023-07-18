@@ -59,7 +59,9 @@ graph TD;
   
  <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <div align="center">
-<br><p align="centre"><b>Visitors Count </b></p>  
+<br><p align="centre">
+<hr>
+<b>Visitors Count </b></p>  
 <p align="center"><img align="center" src="https://profile-counter.glitch.me/{👽}/count.svg" /></p> 
 <br>
 </div>
