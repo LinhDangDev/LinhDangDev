@@ -3,12 +3,12 @@
 
 ![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=02D9F7FF&size=35&center=true&vCenter=true&width=1000&lines=HELLO👋;My+full+name+Dang+Duy+Linh;I'm+20+years+old;I'm+Front+End+Developer;Wellcome!)
 <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
-# 📈 Statistics 
-  <div align="center">  
-  <img width="49%" height="195px" src="https://github-readme-stats.vercel.app/api?username=LinhDangDev&show_icons=true&count_private=true&hide_border=true&title_color=02D9F7FF&icon_color=02D9F7FF&text_color=c9d1d9&bg_color=0d1117" alt="LinhDangDev github stats" /> 
-  
-  <img width="41%" height="195px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=LinhDangDev&layout=compact&hide_border=true&title_color=02D9F7FF&text_color=02D9F7FF&bg_color=0d1117" />
-</div> 
+<h2 align="center">🔥 GitHub Stats 🔥</h2>
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=LinhDangDev&column=-1" alt="LinhDangDev's GitHub trophy">
+</div>
+<br>
+
   <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
 </div> 
   <h1 align="center"></h1><p align="center">
@@ -19,42 +19,34 @@
   </p>
   
   <!------------------------------------------------------------------------------------------------------------------------------------------------------------->
-  # 📌 Social Media
-<div align="center">
-<a href="https://www.facebook.com/Dlinh215562" target="_blank"><img alt="Facebook" src="https://img.shields.io/badge/facebook-%231DA1F2.svg?&style=for-the-badge&logo=facebook&logoColor=white"/></a>
-<a href="https://twitter.com/" target="_blank"><img alt="Twitter" src="https://img.shields.io/badge/twitter-%231DA1F2.svg?&style=for-the-badge&logo=twitter&logoColor=white" /></a>  
-<a href="https://www.instagram.com/linh_hunter15723/" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white"</a> 
-  
-[![Linkedin Badge](https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/duylinh15723/)
-[![Mail Badge](https://img.shields.io/badge/email-c14438?style=for-the-badge&logo=Gmail&logoColor=white&link=mailto:duylinh05030723@gmail.com)](mailto:duylinh05030723@gmail.com)
 
-  <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
-```mermaid
-graph TD;
-    Front-End-->HTML5;
-    Front-End-->CSS3;
-    Front-End-->JavaScript;
-    Front-End-->React;
-    Front-End-->XML;
-    Front-End-->JSON;
-  ```
-<!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<h2 align="center">🛠 Technologies and Tools 🛠</h2>
+<br>
+
 <p align="center">
 
 <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/HTML.svg" width="48" title="HTML"> 
 <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/CSS.svg" width="48" title="CSS">   
 <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/JavaScript.svg" width="48" title="JavaScript"> 
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Java-Dark.svg" width="48" title="Java">  
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/DotNet.svg" width="48" title="Dotnet">  
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/NodeJS-Dark.svg" width="48" title="NodeJs">  
 <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Sass.svg" width="48" title="Sass">  
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/React-Dark.svg" width="48" title="React">  
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/MySQL-Dark.svg" width="48" title="MySQl">    
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/MongoDB.svg" width="48" title="MongoDB">    
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Redis-Dark.svg" width="48" title="Redis">  
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/VSCode-Dark.svg" width="48" title="Vscode">   
 
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/GraphQL-Dark.svg" width="48" title="GrapQL">  
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Postman.svg" width="48" title="Postman">   
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Docker.svg" width="48" title="Docker">   
 <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Figma-Dark.svg" width="48" title="Figma">   
 <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Git.svg" width="48" title="Git">  
-<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/MongoDB.svg" width="48" title="MongoDB">    
-<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/VSCode-Dark.svg" width="48" title="Vscode">   
-<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Discord.svg" width="48" title="Discord">   
+
 <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Github-Dark.svg" width="48" title="Github">   
 <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/StackOverflow-Dark.svg" width="48" title="StackOverFlow">   
-<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Postman.svg" width="48" title="Postman">   
-<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/NodeJS-Dark.svg" width="48" title="NodeJs">  
+
 <p/>
   
  <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
@@ -65,9 +57,22 @@ graph TD;
 <p align="center"><img align="center" src="https://profile-counter.glitch.me/{👽}/count.svg" /></p> 
 <br>
 </div>
+<h2 align="center">👽 Where to find me 👽</h2>
+<br>
+<!-- https://icons8.com -->
+<div align="center">
 
- ![github contribution grid snake animation](https://raw.githubusercontent.com/platane/platane/output/github-contribution-grid-snake-dark.svg#gh-dark-mode-only)![github contribution grid snake animation](https://raw.githubusercontent.com/platane/platane/output/github-contribution-grid-snake.svg#gh-light-mode-only)
 
+  <a href="https://www.linkedin.com/in/duylinh15723/" target="blank">
+    <img src="https://img.icons8.com/bubbles/100/000000/linkedin.png"   title="Connect me on Linkedin" alt="thanhhoa214-linkedin" />
+  </a>
+  <a href="https://t.me/linhdangdev15723" target="blank">
+    <img src="https://img.icons8.com/bubbles/100/000000/sent.png"   title="Ping my Telegram" alt="thanhhoa214-telegram" />
+  </a>
+  <a href="mailto:duylinh05030723@gmail.com" target="blank">
+    <img src="https://img.icons8.com/bubbles/100/000000/apple-mail.png"   title="Send an email" alt="duylinh05030723-email" />
+  </a>
+</div>
    <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
   
   
