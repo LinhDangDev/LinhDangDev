@@ -1,7 +1,6 @@
 
 
 
-![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=02D9F7FF&size=35&center=true&vCenter=true&width=1000&lines=HELLO👋;My+full+name+Dang+Duy+Linh;I'm+20+years+old;I'm+Front+End+Developer;Wellcome!)
 <!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <h2 align="center">🔥 GitHub Stats 🔥</h2>
 <div align="center">
