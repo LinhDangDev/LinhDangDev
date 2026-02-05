@@ -1,65 +1,319 @@
 <div align="center">
 
-<!-- TERMINAL WINDOW HEADER -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:FF6B6B,50:4ECDC4,100:FFE66D&height=120&section=header&text=&fontSize=0"/>
+<!-- WINDOWS XP STYLE DESKTOP -->
 
-<!-- NEOBRUTALIST TERMINAL CONTAINER -->
+<!-- TITLE BAR -->
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:0A246A,100:0A246A&height=30&section=header&text=Linh's%20Desktop%20-%20Windows%20XP&fontSize=14&fontColor=FFFFFF&fontAlign=50&fontAlignY=55"/>
+
+<!-- DESKTOP AREA WITH BLISS WALLPAPER STYLE -->
+<table>
+<tr>
+<td align="center" style="background: linear-gradient(180deg, #245EDC 0%, #3A8BC2 50%, #7BC74D 100%); padding: 30px;">
+
+<!-- DESKTOP ICONS ROW 1 -->
+<table>
+<tr>
+<td align="center" width="120" style="padding: 15px;">
+
+<a href="https://github.com/LinhDangDev">
+<img src="https://img.icons8.com/color/96/user-folder.png" width="64" alt="My Profile"/>
+</a>
+<br/>
+<sub><b>📁 My Profile</b></sub>
+
+</td>
+<td align="center" width="120" style="padding: 15px;">
+
+<a href="https://github.com/LinhDangDev?tab=repositories">
+<img src="https://img.icons8.com/color/96/folder-invoices.png" width="64" alt="My Projects"/>
+</a>
+<br/>
+<sub><b>📂 My Projects</b></sub>
+
+</td>
+<td align="center" width="120" style="padding: 15px;">
+
+<a href="https://www.linkedin.com/in/duylinh15723/">
+<img src="https://img.icons8.com/fluency/96/linkedin.png" width="64" alt="LinkedIn"/>
+</a>
+<br/>
+<sub><b>💼 LinkedIn</b></sub>
+
+</td>
+<td align="center" width="120" style="padding: 15px;">
+
+<a href="https://g.dev/linhdangdev">
+<img src="https://img.icons8.com/color/96/domain.png" width="64" alt="Portfolio"/>
+</a>
+<br/>
+<sub><b>🌐 Portfolio</b></sub>
+
+</td>
+<td align="center" width="120" style="padding: 15px;">
+
+<a href="mailto:duylinh05030723@gmail.com">
+<img src="https://img.icons8.com/fluency/96/gmail-new.png" width="64" alt="Email"/>
+</a>
+<br/>
+<sub><b>📧 Email Me</b></sub>
+
+</td>
+<td align="center" width="120" style="padding: 15px;">
+
+<a href="https://t.me/linhdangdev15723">
+<img src="https://img.icons8.com/fluency/96/telegram-app.png" width="64" alt="Telegram"/>
+</a>
+<br/>
+<sub><b>📱 Telegram</b></sub>
+
+</td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
+
+<br/>
+
+<!-- WINDOW: ABOUT ME -->
 <table>
 <tr>
 <td>
 
+<!-- Window Title Bar -->
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td style="background: linear-gradient(180deg, #0A246A 0%, #A6CAF0 8%, #0A246A 100%); padding: 4px 8px; border-radius: 8px 8px 0 0;">
+<img src="https://img.icons8.com/color/20/user-male-circle.png"/> <b style="color: white;">About Me - Notepad</b>
+<span style="float: right;">
+<img src="https://img.icons8.com/color/20/minimize-window.png"/>
+<img src="https://img.icons8.com/color/20/maximize-window.png"/>
+<img src="https://img.icons8.com/color/20/close-window.png"/>
+</span>
+</td>
+</tr>
+</table>
+
 ```
-╔══════════════════════════════════════════════════════════════════════════════╗
-║  ● ● ●  │  linhdang@dev:~                                               ─ □ x ║
-╠══════════════════════════════════════════════════════════════════════════════╣
-║                                                                              ║
-║  $ whoami                                                                    ║
-║  ╭─────────────────────────────────────────────────────────────────────────╮ ║
-║  │  👨‍💻 Đặng Duy Linh | Full-Stack Developer | Ho Chi Minh City, Vietnam │ ║
-║  ╰─────────────────────────────────────────────────────────────────────────╯ ║
-║                                                                              ║
-║  $ cat ./about.txt                                                           ║
-║  > Passionate developer crafting digital experiences                         ║
-║  > From backend systems to beautiful frontends                               ║
-║  > Always learning, always building                                          ║
-║                                                                              ║
-╚══════════════════════════════════════════════════════════════════════════════╝
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  File  Edit  Format  View  Help                                             │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  👨‍💻 Name:     Đặng Duy Linh                                                │
+│  📍 Location: Ho Chi Minh City, Vietnam                                    │
+│  💼 Role:     Full-Stack Developer                                         │
+│                                                                             │
+│  ─────────────────────────────────────────────────────────────────────────  │
+│                                                                             │
+│  > Passionate developer crafting digital experiences                        │
+│  > From backend systems to beautiful frontends                              │
+│  > Always learning, always building 🚀                                      │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
 ```
 
 </td>
 </tr>
 </table>
 
-<!-- TYPING ANIMATION -->
-<a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=24&duration=3000&pause=1000&color=FF6B6B&center=true&vCenter=true&multiline=true&repeat=true&width=600&height=80&lines=%24+echo+%22Welcome+to+my+terminal%22;Building+awesome+things+with+code+%F0%9F%9A%80" alt="Typing SVG" />
+<br/>
+
+<!-- WINDOW: SKILLS - COMMAND PROMPT -->
+<table>
+<tr>
+<td>
+
+<!-- CMD Title Bar -->
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td style="background: linear-gradient(180deg, #0A246A 0%, #A6CAF0 8%, #0A246A 100%); padding: 4px 8px; border-radius: 8px 8px 0 0;">
+<img src="https://img.icons8.com/color/20/console.png"/> <b style="color: white;">C:\Skills\> - Command Prompt</b>
+<span style="float: right;">
+<img src="https://img.icons8.com/color/20/minimize-window.png"/>
+<img src="https://img.icons8.com/color/20/maximize-window.png"/>
+<img src="https://img.icons8.com/color/20/close-window.png"/>
+</span>
+</td>
+</tr>
+</table>
+
+```batch
+Microsoft Windows XP [Version 5.1.2600]
+(C) Copyright 1985-2024 Linh Dev Corp.
+
+C:\Users\Linh> dir /skills
+
+ Directory of C:\Users\Linh\Skills
+
+ [FOLDER]  frontend     ████████████████████░░  90%   EXPERT
+ [FOLDER]  backend      ███████████████████░░░  85%   ADVANCED
+ [FOLDER]  database     ████████████████░░░░░░  75%   PROFICIENT
+ [FOLDER]  devops       ███████████░░░░░░░░░░░  55%   LEARNING
+ [FOLDER]  mobile       ██████████████░░░░░░░░  70%   PROFICIENT
+
+C:\Users\Linh> _
+```
+
+</td>
+</tr>
+</table>
+
+<br/>
+
+<!-- TECH STACK ICONS - CLICKABLE -->
+<table>
+<tr>
+<td>
+
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td style="background: linear-gradient(180deg, #0A246A 0%, #A6CAF0 8%, #0A246A 100%); padding: 4px 8px; border-radius: 8px 8px 0 0;">
+<img src="https://img.icons8.com/color/20/toolbox.png"/> <b style="color: white;">Tech Stack - Control Panel</b>
+<span style="float: right;">
+<img src="https://img.icons8.com/color/20/minimize-window.png"/>
+<img src="https://img.icons8.com/color/20/maximize-window.png"/>
+<img src="https://img.icons8.com/color/20/close-window.png"/>
+</span>
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td align="center" style="background: #ECE9D8; padding: 15px;">
+
+**💻 LANGUAGES**
+
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://skillicons.dev/icons?i=js" width="40" title="JavaScript"/></a>
+<a href="https://www.typescriptlang.org/"><img src="https://skillicons.dev/icons?i=ts" width="40" title="TypeScript"/></a>
+<a href="https://www.java.com/"><img src="https://skillicons.dev/icons?i=java" width="40" title="Java"/></a>
+<a href="https://docs.microsoft.com/en-us/dotnet/csharp/"><img src="https://skillicons.dev/icons?i=cs" width="40" title="C#"/></a>
+<a href="https://dart.dev/"><img src="https://skillicons.dev/icons?i=dart" width="40" title="Dart"/></a>
+<a href="https://www.python.org/"><img src="https://skillicons.dev/icons?i=py" width="40" title="Python"/></a>
+
+</td>
+<td align="center" style="background: #ECE9D8; padding: 15px;">
+
+**🎨 FRONTEND**
+
+<a href="https://reactjs.org/"><img src="https://skillicons.dev/icons?i=react" width="40" title="React"/></a>
+<a href="https://nextjs.org/"><img src="https://skillicons.dev/icons?i=nextjs" width="40" title="Next.js"/></a>
+<a href="https://tailwindcss.com/"><img src="https://skillicons.dev/icons?i=tailwind" width="40" title="Tailwind"/></a>
+<a href="https://sass-lang.com/"><img src="https://skillicons.dev/icons?i=sass" width="40" title="Sass"/></a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML"><img src="https://skillicons.dev/icons?i=html" width="40" title="HTML5"/></a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img src="https://skillicons.dev/icons?i=css" width="40" title="CSS3"/></a>
+
+</td>
+</tr>
+<tr>
+<td align="center" style="background: #ECE9D8; padding: 15px;">
+
+**⚙️ BACKEND**
+
+<a href="https://nodejs.org/"><img src="https://skillicons.dev/icons?i=nodejs" width="40" title="Node.js"/></a>
+<a href="https://dotnet.microsoft.com/"><img src="https://skillicons.dev/icons?i=dotnet" width="40" title=".NET"/></a>
+<a href="https://spring.io/"><img src="https://skillicons.dev/icons?i=spring" width="40" title="Spring"/></a>
+<a href="https://nestjs.com/"><img src="https://skillicons.dev/icons?i=nestjs" width="40" title="NestJS"/></a>
+<a href="https://expressjs.com/"><img src="https://skillicons.dev/icons?i=express" width="40" title="Express"/></a>
+<a href="https://graphql.org/"><img src="https://skillicons.dev/icons?i=graphql" width="40" title="GraphQL"/></a>
+
+</td>
+<td align="center" style="background: #ECE9D8; padding: 15px;">
+
+**🗄️ DATABASE & TOOLS**
+
+<a href="https://www.mysql.com/"><img src="https://skillicons.dev/icons?i=mysql" width="40" title="MySQL"/></a>
+<a href="https://www.mongodb.com/"><img src="https://skillicons.dev/icons?i=mongodb" width="40" title="MongoDB"/></a>
+<a href="https://redis.io/"><img src="https://skillicons.dev/icons?i=redis" width="40" title="Redis"/></a>
+<a href="https://www.docker.com/"><img src="https://skillicons.dev/icons?i=docker" width="40" title="Docker"/></a>
+<a href="https://git-scm.com/"><img src="https://skillicons.dev/icons?i=git" width="40" title="Git"/></a>
+<a href="https://www.figma.com/"><img src="https://skillicons.dev/icons?i=figma" width="40" title="Figma"/></a>
+
+</td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
+
+<br/>
+
+<!-- WINDOW: MY PROJECTS - WINDOWS EXPLORER -->
+<table>
+<tr>
+<td>
+
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td style="background: linear-gradient(180deg, #0A246A 0%, #A6CAF0 8%, #0A246A 100%); padding: 4px 8px; border-radius: 8px 8px 0 0;">
+<img src="https://img.icons8.com/color/20/folder-tree.png"/> <b style="color: white;">My Projects - Windows Explorer</b>
+<span style="float: right;">
+<img src="https://img.icons8.com/color/20/minimize-window.png"/>
+<img src="https://img.icons8.com/color/20/maximize-window.png"/>
+<img src="https://img.icons8.com/color/20/close-window.png"/>
+</span>
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td align="center" width="25%" style="background: #ECE9D8; padding: 20px;">
+
+<a href="https://github.com/LinhDangDev/Music_Streaming_Platform">
+<img src="https://img.icons8.com/fluency/96/music-folder.png" width="64"/>
+<br/>
+<b>🎵 Music Platform</b>
+<br/>
+<sub>Dart/Flutter</sub>
+<br/>
+<img src="https://img.shields.io/github/stars/LinhDangDev/Music_Streaming_Platform?style=flat-square&color=FFD700"/>
 </a>
 
-<br/><br/>
+</td>
+<td align="center" width="25%" style="background: #ECE9D8; padding: 20px;">
 
-<!-- NEOBRUTALIST STATS BLOCKS -->
-<table>
-<tr>
-<td align="center" style="border: 4px solid #000; background: #FF6B6B; padding: 20px;">
-
-### 📊 SYSTEM STATS
+<a href="https://github.com/LinhDangDev/Exam-Management-System">
+<img src="https://img.icons8.com/fluency/96/test-passed.png" width="64"/>
+<br/>
+<b>📝 Exam System</b>
+<br/>
+<sub>C# / .NET</sub>
+<br/>
+<img src="https://img.shields.io/github/stars/LinhDangDev/Exam-Management-System?style=flat-square&color=FFD700"/>
+</a>
 
 </td>
-<td align="center" style="border: 4px solid #000; background: #4ECDC4; padding: 20px;">
+<td align="center" width="25%" style="background: #ECE9D8; padding: 20px;">
 
-### ⚡ POWER LEVEL
+<a href="https://github.com/LinhDangDev/livestreaming">
+<img src="https://img.icons8.com/fluency/96/video-playlist.png" width="64"/>
+<br/>
+<b>📺 Livestreaming</b>
+<br/>
+<sub>JavaScript</sub>
+<br/>
+<img src="https://img.shields.io/github/stars/LinhDangDev/livestreaming?style=flat-square&color=FFD700"/>
+</a>
+
+</td>
+<td align="center" width="25%" style="background: #ECE9D8; padding: 20px;">
+
+<a href="https://github.com/LinhDangDev/build-games-with-amazon-q-cli-line98-icon-aws">
+<img src="https://img.icons8.com/fluency/96/controller.png" width="64"/>
+<br/>
+<b>🎮 AWS Games</b>
+<br/>
+<sub>TypeScript</sub>
+<br/>
+<img src="https://img.shields.io/github/stars/LinhDangDev/build-games-with-amazon-q-cli-line98-icon-aws?style=flat-square&color=FFD700"/>
+</a>
 
 </td>
 </tr>
-<tr>
-<td>
-
-[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=LinhDangDev&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=FF6B6B&icon_color=4ECDC4&text_color=FFFFFF&ring_color=FFE66D)](https://github.com/LinhDangDev)
-
-</td>
-<td>
-
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=LinhDangDev&theme=radical&hide_border=true&background=0D1117&ring=FF6B6B&fire=FFE66D&currStreakLabel=4ECDC4)](https://github.com/LinhDangDev)
+</table>
 
 </td>
 </tr>
@@ -67,119 +321,38 @@
 
 <br/>
 
-<!-- TERMINAL: SKILLS COMMAND -->
+<!-- WINDOW: GITHUB STATS - TASK MANAGER -->
 <table>
 <tr>
 <td>
 
-```bash
-╔═══════════════════════════════════════════════════════════════╗
-║  $ ls -la ./skills/                                           ║
-╠═══════════════════════════════════════════════════════════════╣
-║                                                               ║
-║  drwxr-xr-x  frontend/     ████████████████████░░  90%       ║
-║  drwxr-xr-x  backend/      ███████████████████░░░  85%       ║
-║  drwxr-xr-x  database/     ████████████████░░░░░░  75%       ║
-║  drwxr-xr-x  devops/       ███████████░░░░░░░░░░░  55%       ║
-║  drwxr-xr-x  mobile/       ██████████████░░░░░░░░  70%       ║
-║                                                               ║
-╚═══════════════════════════════════════════════════════════════╝
-```
-
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td style="background: linear-gradient(180deg, #0A246A 0%, #A6CAF0 8%, #0A246A 100%); padding: 4px 8px; border-radius: 8px 8px 0 0;">
+<img src="https://img.icons8.com/color/20/bar-chart.png"/> <b style="color: white;">GitHub Stats - Task Manager</b>
+<span style="float: right;">
+<img src="https://img.icons8.com/color/20/minimize-window.png"/>
+<img src="https://img.icons8.com/color/20/maximize-window.png"/>
+<img src="https://img.icons8.com/color/20/close-window.png"/>
+</span>
 </td>
 </tr>
 </table>
 
-<br/>
-
-<!-- SKILL ICONS GRID - NEOBRUTALIST STYLE -->
-<h2>
-  <img src="https://media.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif" width="28">
-  TECH STACK
-  <img src="https://media.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif" width="28">
-</h2>
-
-<table>
+<table width="100%">
 <tr>
-<td align="center" width="140" style="border: 3px solid #000;">
+<td align="center" style="background: #ECE9D8; padding: 15px;">
 
-**LANGUAGES**
-
-</td>
-<td align="center" width="140" style="border: 3px solid #000;">
-
-**FRONTEND**
+[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=LinhDangDev&show_icons=true&theme=vue&hide_border=true&bg_color=ECE9D8&title_color=0A246A&icon_color=0A246A&text_color=000000)](https://github.com/LinhDangDev)
 
 </td>
-<td align="center" width="140" style="border: 3px solid #000;">
+<td align="center" style="background: #ECE9D8; padding: 15px;">
 
-**BACKEND**
-
-</td>
-<td align="center" width="140" style="border: 3px solid #000;">
-
-**DATABASE**
-
-</td>
-<td align="center" width="140" style="border: 3px solid #000;">
-
-**TOOLS**
-
-</td>
-</tr>
-<tr>
-<td align="center" style="background: #FF6B6B20;">
-
-[![My Skills](https://skillicons.dev/icons?i=js,ts,java,cs,dart,py&perline=3)](https://skillicons.dev)
-
-</td>
-<td align="center" style="background: #4ECDC420;">
-
-[![My Skills](https://skillicons.dev/icons?i=html,css,react,sass,tailwind,nextjs&perline=3)](https://skillicons.dev)
-
-</td>
-<td align="center" style="background: #FFE66D20;">
-
-[![My Skills](https://skillicons.dev/icons?i=nodejs,dotnet,spring,graphql,express,nestjs&perline=3)](https://skillicons.dev)
-
-</td>
-<td align="center" style="background: #95E1D320;">
-
-[![My Skills](https://skillicons.dev/icons?i=mysql,mongodb,redis,postgres,firebase,supabase&perline=3)](https://skillicons.dev)
-
-</td>
-<td align="center" style="background: #DDA0DD20;">
-
-[![My Skills](https://skillicons.dev/icons?i=docker,git,github,vscode,postman,figma&perline=3)](https://skillicons.dev)
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=LinhDangDev&theme=vue&hide_border=true&background=ECE9D8&ring=0A246A&fire=FF6B00&currStreakLabel=0A246A&sideLabels=0A246A)](https://github.com/LinhDangDev)
 
 </td>
 </tr>
 </table>
-
-<br/>
-
-<!-- TERMINAL: PROJECTS COMMAND -->
-<table>
-<tr>
-<td>
-
-```bash
-╔══════════════════════════════════════════════════════════════════════════════╗
-║  $ tree ./featured_projects/                                                 ║
-╠══════════════════════════════════════════════════════════════════════════════╣
-║                                                                              ║
-║  📂 featured_projects/                                                       ║
-║  ├── 🎵 Music_Streaming_Platform/     [Dart/Flutter]     ⭐ 1               ║
-║  │   └── Full-featured music streaming app                                   ║
-║  ├── 📝 Exam-Management-System/       [C#/.NET]          ⭐ 2               ║
-║  │   └── Complete exam management solution                                   ║
-║  ├── 📺 livestreaming/                [JavaScript]       ⭐ 0               ║
-║  │   └── Real-time streaming platform                                        ║
-║  └── 🎮 build-games-with-amazon-q/    [TypeScript]       ⭐ 0               ║
-║      └── AWS-powered game development                                        ║
-║                                                                              ║
-╚══════════════════════════════════════════════════════════════════════════════╝
-```
 
 </td>
 </tr>
@@ -188,55 +361,24 @@
 <br/>
 
 <!-- CONTRIBUTION GRAPH -->
-<h2>📈 CONTRIBUTION ACTIVITY</h2>
-
-[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=LinhDangDev&custom_title=Linh's%20Contribution%20Graph&bg_color=0D1117&color=FF6B6B&line=4ECDC4&point=FFE66D&area_color=4ECDC4&title_color=FF6B6B&area=true&hide_border=true)](https://github.com/LinhDangDev)
-
-<!-- PROFILE SUMMARY -->
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=LinhDangDev&theme=radical" width="100%"/>
-
-<br/>
-
-<!-- TROPHY CASE -->
 <table>
 <tr>
 <td>
 
-```
-╔════════════════════════════════════════════════════════════╗
-║  $ cat ./achievements.log                                  ║
-╚════════════════════════════════════════════════════════════╝
-```
-
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td style="background: linear-gradient(180deg, #0A246A 0%, #A6CAF0 8%, #0A246A 100%); padding: 4px 8px; border-radius: 8px 8px 0 0;">
+<img src="https://img.icons8.com/color/20/activity-grid.png"/> <b style="color: white;">Contribution Activity - Performance Monitor</b>
+<span style="float: right;">
+<img src="https://img.icons8.com/color/20/minimize-window.png"/>
+<img src="https://img.icons8.com/color/20/maximize-window.png"/>
+<img src="https://img.icons8.com/color/20/close-window.png"/>
+</span>
 </td>
 </tr>
 </table>
 
-[![Trophy](https://github-profile-trophy.vercel.app/?username=LinhDangDev&theme=radical&no-frame=true&no-bg=true&column=7&margin-w=15&margin-h=15)](https://github.com/LinhDangDev)
-
-<br/>
-
-<!-- TERMINAL: CONTACT INFO -->
-<table>
-<tr>
-<td>
-
-```bash
-╔══════════════════════════════════════════════════════════════════════════════╗
-║  $ ./connect.sh                                                              ║
-╠══════════════════════════════════════════════════════════════════════════════╣
-║                                                                              ║
-║  🔗 ESTABLISHING CONNECTIONS...                                              ║
-║                                                                              ║
-║  ├── 💼 LinkedIn ────────► in/duylinh15723                                  ║
-║  ├── 🌐 Portfolio ───────► g.dev/linhdangdev                                ║
-║  ├── 📱 Telegram ────────► @linhdangdev15723                                ║
-║  └── 📧 Email ───────────► duylinh05030723@gmail.com                        ║
-║                                                                              ║
-║  STATUS: Ready to collaborate! 🚀                                            ║
-║                                                                              ║
-╚══════════════════════════════════════════════════════════════════════════════╝
-```
+[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=LinhDangDev&custom_title=Contribution%20Activity&bg_color=ECE9D8&color=0A246A&line=0A246A&point=FF6B00&area_color=A6CAF0&title_color=0A246A&area=true&hide_border=true)](https://github.com/LinhDangDev)
 
 </td>
 </tr>
@@ -244,100 +386,59 @@
 
 <br/>
 
-<!-- SOCIAL LINKS WITH NEOBRUTALIST BUTTONS -->
-<p>
-  <a href="https://www.linkedin.com/in/duylinh15723/">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=000000" alt="LinkedIn"/>
-  </a>
-  &nbsp;
-  <a href="https://g.dev/linhdangdev">
-    <img src="https://img.shields.io/badge/Portfolio-FF6B6B?style=for-the-badge&logo=google&logoColor=white&labelColor=000000" alt="Portfolio"/>
-  </a>
-  &nbsp;
-  <a href="https://t.me/linhdangdev15723">
-    <img src="https://img.shields.io/badge/Telegram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white&labelColor=000000" alt="Telegram"/>
-  </a>
-  &nbsp;
-  <a href="mailto:duylinh05030723@gmail.com">
-    <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white&labelColor=000000" alt="Email"/>
-  </a>
-</p>
-
-<br/>
-
-<!-- VISITOR COUNTER -->
+<!-- TROPHY SECTION -->
 <table>
 <tr>
 <td>
 
-```
-╔════════════════════════════════════════════════════════════╗
-║  $ uptime                                                  ║
-║  > Profile visitors:                                       ║
-╚════════════════════════════════════════════════════════════╝
-```
-
-</td>
-</tr>
-</table>
-
-<img src="https://komarev.com/ghpvc/?username=LinhDangDev&style=for-the-badge&color=FF6B6B&label=PROFILE+VIEWS" alt="Profile Views"/>
-
-<br/>
-
-<!-- SNAKE ANIMATION -->
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/LinhDangDev/LinhDangDev/output/github-contribution-grid-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/LinhDangDev/LinhDangDev/output/github-contribution-grid-snake.svg">
-  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/LinhDangDev/LinhDangDev/output/github-contribution-grid-snake.svg">
-</picture>
-
-<br/><br/>
-
-<!-- FOOTER -->
-<table>
+<table width="100%" cellspacing="0" cellpadding="0">
 <tr>
-<td>
-
-```
-╔══════════════════════════════════════════════════════════════════════════════╗
-║                                                                              ║
-║  $ echo "Thanks for visiting! Let's build something amazing together! 🚀"   ║
-║                                                                              ║
-║  [Process completed - Exit code: 0]                                          ║
-║                                                                              ║
-╚══════════════════════════════════════════════════════════════════════════════╝
-```
-
+<td style="background: linear-gradient(180deg, #0A246A 0%, #A6CAF0 8%, #0A246A 100%); padding: 4px 8px; border-radius: 8px 8px 0 0;">
+<img src="https://img.icons8.com/color/20/trophy.png"/> <b style="color: white;">Achievements - My Trophies</b>
+<span style="float: right;">
+<img src="https://img.icons8.com/color/20/minimize-window.png"/>
+<img src="https://img.icons8.com/color/20/maximize-window.png"/>
+<img src="https://img.icons8.com/color/20/close-window.png"/>
+</span>
 </td>
 </tr>
 </table>
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:FF6B6B,50:4ECDC4,100:FFE66D&height=120&section=footer"/>
+<div style="background: #ECE9D8; padding: 15px;">
+
+[![Trophy](https://github-profile-trophy.vercel.app/?username=LinhDangDev&theme=flat&no-frame=true&no-bg=true&column=7&margin-w=10&margin-h=10)](https://github.com/LinhDangDev)
 
 </div>
 
-<!-- GITHUB ACTION FOR SNAKE (Add this workflow to .github/workflows/snake.yml) -->
-<!--
-name: Generate Snake
-on:
-  schedule:
-    - cron: "0 */12 * * *"
-  workflow_dispatch:
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: Platane/snk@v3
-        with:
-          github_user_name: LinhDangDev
-          outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-      - uses: crazy-max/ghaction-github-pages@v3.1.0
-        with:
-          target_branch: output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
--->
+</td>
+</tr>
+</table>
+
+<br/>
+
+<!-- WINDOWS XP TASKBAR -->
+<table width="100%">
+<tr>
+<td style="background: linear-gradient(180deg, #245EDC 0%, #3168D8 50%, #245EDC 100%); padding: 4px 10px; border-radius: 0 0 0 0;">
+
+<img src="https://img.icons8.com/color/28/windows-xp.png" style="vertical-align: middle;"/>
+<b style="color: white; font-family: 'Trebuchet MS', sans-serif;"> start</b>
+&nbsp;&nbsp;&nbsp;
+<a href="https://github.com/LinhDangDev"><img src="https://img.shields.io/badge/GitHub-ECE9D8?style=flat-square&logo=github&logoColor=000000" alt="GitHub"/></a>
+<a href="https://www.linkedin.com/in/duylinh15723/"><img src="https://img.shields.io/badge/LinkedIn-ECE9D8?style=flat-square&logo=linkedin&logoColor=0A66C2" alt="LinkedIn"/></a>
+<a href="https://t.me/linhdangdev15723"><img src="https://img.shields.io/badge/Telegram-ECE9D8?style=flat-square&logo=telegram&logoColor=26A5E4" alt="Telegram"/></a>
+<a href="mailto:duylinh05030723@gmail.com"><img src="https://img.shields.io/badge/Email-ECE9D8?style=flat-square&logo=gmail&logoColor=EA4335" alt="Email"/></a>
+
+<span style="float: right; color: white; font-family: 'Trebuchet MS', sans-serif;">
+🕐 <b>Online</b>
+</span>
+
+</td>
+</tr>
+</table>
+
+---
+
+<sub>💻 Designed with Windows XP vibes | Made with ❤️ by <a href="https://github.com/LinhDangDev">Linh</a></sub>
+
+</div>
