@@ -1,5 +1,22 @@
 <div align="center">
 
+<!-- INTERACTIVE DESKTOP BANNER -->
+<a href="https://linhdangdev.github.io/LinhDangDev/">
+<table>
+<tr>
+<td align="center" style="background: linear-gradient(90deg, #000080, #1084d0); padding: 12px 24px; border: 3px outset #c0c0c0;">
+<img src="https://img.icons8.com/color/32/windows-95.png" alt="Windows 95"/>
+<br/>
+<b style="color: white; font-size: 14px;">🖥️ Click here for FULL Interactive Desktop Experience!</b>
+<br/>
+<sub style="color: #c0c0c0;">Drag windows • Start menu • Animations • The real Windows 95 vibe</sub>
+</td>
+</tr>
+</table>
+</a>
+
+<br/>
+
 <!-- WINDOWS 95 DESKTOP BACKGROUND -->
 <table>
 <tr>
