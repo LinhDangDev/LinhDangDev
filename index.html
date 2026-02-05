@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linh's Desktop - Windows 95</title>
+    <link rel="icon" href="https://img.icons8.com/color/32/windows-95.png" type="image/png">
+    <style>
+        /* ============================================
+           WINDOWS 95 STYLE SYSTEM
+           ============================================ */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none;
+        }
+
+        :root {
+            --win-bg: #c0c0c0;
+            --win-dark: #808080;
+            --win-darker: #404040;
+            --win-light: #dfdfdf;
+            --win-lighter: #ffffff;
+            --win-title: #000080;
+            --win-title-inactive: #808080;
+            --win-title-gradient: linear-gradient(90deg, #000080, #1084d0);
+            --desktop-bg: #008080;
+            --taskbar-bg: #c0c0c0;
+        }
+
+        body {
+            font-family: 'MS Sans Serif', 'Segoe UI', Tahoma, sans-serif;
+            font-size: 11px;
+            overflow: hidden;
+            height: 100vh;
+            background: var(--desktop-bg);
+        }
+
+        /* ============================================
+           DESKTOP
+           ============================================ */
+
+        #desktop {
+            position: relative;
+            width: 100%;
+            height: calc(100vh - 28px);
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            gap: 10px;
+        }
+
+        /* ============================================
+           DESKTOP ICONS
+           ============================================ */
+
+        .desktop-icon {
+            width: 70px;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+
+        .desktop-icon:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .desktop-icon.selected {
+            background: #000080;
+            border: 1px dotted #fff;
+        }
+
+        .desktop-icon.selected .icon-label {
+            color: #fff;
+            background: #000080;
+        }
+
+        .desktop-icon img {
+            width: 32px;
+            height: 32px;
+            margin-bottom: 4px;
+            image-rendering: pixelated;
+        }
+
+        .icon-label {
+            color: #fff;
+            text-align: center;
+            font-size: 11px;
+            text-shadow: 1px 1px 1px #000;
+            word-wrap: break-word;
+            max-width: 70px;
+        }
+
+        /* ============================================
+           WINDOW STYLES
+           ============================================ */
+
+        .window {
+            position: absolute;
+            background: var(--win-bg);
+            border: 2px solid;
+            border-color: var(--win-lighter) var(--win-darker) var(--win-darker) var(--win-lighter);
+            box-shadow: 1px 1px 0 var(--win-dark);
+            min-width: 200px;
+            min-height: 100px;
+            display: none;
+            flex-direction: column;
+        }
+
+        .window.active {
+            z-index: 100;
+        }
+
+        .window.active .title-bar {
+            background: var(--win-title-gradient);
+        }
+
+        .window:not(.active) .title-bar {
+            background: var(--win-title-inactive);
+        }
+
+        /* Title Bar */
+        .title-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2px 3px;
+            cursor: move;
+            height: 18px;
+        }
+
+        .title-bar-text {
+            color: #fff;
+            font-weight: bold;
+            font-size: 11px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .title-bar-text img {
+            width: 16px;
+            height: 16px;
+        }
+
+        .title-bar-controls {
+            display: flex;
+            gap: 2px;
+        }
+
+        .title-bar-controls button {
+            width: 16px;
+            height: 14px;
+            border: 1px solid;
+            border-color: var(--win-lighter) var(--win-darker) var(--win-darker) var(--win-lighter);
+            background: var(--win-bg);
+            font-size: 9px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+        }
+
+        .title-bar-controls button:active {
+            border-color: var(--win-darker) var(--win-lighter) var(--win-lighter) var(--win-darker);
+        }
+
+        /* Menu Bar */
+        .menu-bar {
+            display: flex;
+            padding: 2px;
+            border-bottom: 1px solid var(--win-dark);
+        }
+
+        .menu-item {
+            padding: 2px 6px;
+            cursor: pointer;
+        }
+
+        .menu-item:hover {
+            background: var(--win-title);
+            color: #fff;
+        }
+
+        /* Window Content */
+        .window-content {
+            flex: 1;
+            overflow: auto;
+            background: #fff;
+            margin: 2px;
+            border: 2px solid;
+            border-color: var(--win-dark) var(--win-lighter) var(--win-lighter) var(--win-dark);
+            padding: 8px;
+        }
+
+        .window-content.gray {
+            background: var(--win-bg);
+        }
+
+        .window-content.black {
+            background: #000;
+            color: #c0c0c0;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 12px;
+        }
+
+        /* Status Bar */
+        .status-bar {
+            display: flex;
+            padding: 2px;
+            border-top: 1px solid var(--win-lighter);
+            gap: 2px;
+        }
+
+        .status-bar-field {
+            flex: 1;
+            padding: 1px 4px;
+            border: 1px solid;
+            border-color: var(--win-dark) var(--win-lighter) var(--win-lighter) var(--win-dark);
+            font-size: 11px;
+        }
+
+        /* ============================================
+           TASKBAR
+           ============================================ */
+
+        #taskbar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 28px;
+            background: var(--taskbar-bg);
+            border-top: 2px solid var(--win-lighter);
+            display: flex;
+            align-items: center;
+            padding: 2px;
+            z-index: 1000;
+        }
+
+        #start-button {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 2px 6px;
+            border: 2px solid;
+            border-color: var(--win-lighter) var(--win-darker) var(--win-darker) var(--win-lighter);
+            background: var(--win-bg);
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 11px;
+            height: 22px;
+        }
+
+        #start-button:active,
+        #start-button.active {
+            border-color: var(--win-darker) var(--win-lighter) var(--win-lighter) var(--win-darker);
+        }
+
+        #start-button img {
+            width: 16px;
+            height: 16px;
+        }
+
+        #taskbar-windows {
+            flex: 1;
+            display: flex;
+            gap: 2px;
+            padding: 0 4px;
+            overflow: hidden;
+        }
+
+        .taskbar-button {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 2px 8px;
+            border: 2px solid;
+            border-color: var(--win-lighter) var(--win-darker) var(--win-darker) var(--win-lighter);
+            background: var(--win-bg);
+            cursor: pointer;
+            font-size: 11px;
+            max-width: 150px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            height: 22px;
+        }
+
+        .taskbar-button.active {
+            border-color: var(--win-darker) var(--win-lighter) var(--win-lighter) var(--win-darker);
+            background: #fff;
+        }
+
+        .taskbar-button img {
+            width: 16px;
+            height: 16px;
+        }
+
+        #system-tray {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 2px 8px;
+            border: 2px solid;
+            border-color: var(--win-dark) var(--win-lighter) var(--win-lighter) var(--win-dark);
+            height: 22px;
+        }
+
+        #clock {
+            font-size: 11px;
+        }
+
+        /* ============================================
+           START MENU
+           ============================================ */
+
+        #start-menu {
+            position: fixed;
+            bottom: 28px;
+            left: 0;
+            width: 200px;
+            background: var(--win-bg);
+            border: 2px solid;
+            border-color: var(--win-lighter) var(--win-darker) var(--win-darker) var(--win-lighter);
+            display: none;
+            z-index: 1001;
+        }
+
+        #start-menu.show {
+            display: block;
+        }
+
+        .start-menu-sidebar {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 24px;
+            background: linear-gradient(180deg, #000080, #1084d0);
+            display: flex;
+            align-items: flex-end;
+            padding-bottom: 8px;
+        }
+
+        .start-menu-sidebar span {
+            color: #c0c0c0;
+            font-weight: bold;
+            font-size: 18px;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            letter-spacing: 2px;
+        }
+
+        .start-menu-items {
+            margin-left: 24px;
+            padding: 2px;
+        }
+
+        .start-menu-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 8px;
+            cursor: pointer;
+        }
+
+        .start-menu-item:hover {
+            background: var(--win-title);
+            color: #fff;
+        }
+
+        .start-menu-item img {
+            width: 32px;
+            height: 32px;
+        }
+
+        .start-menu-divider {
+            height: 1px;
+            background: var(--win-dark);
+            margin: 4px 8px;
+        }
+
+        /* ============================================
+           SPECIFIC WINDOW CONTENT
+           ============================================ */
+
+        /* About Me */
+        .about-section {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .about-avatar {
+            width: 100px;
+            height: 100px;
+            border: 2px solid;
+            border-color: var(--win-dark) var(--win-lighter) var(--win-lighter) var(--win-dark);
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+        }
+
+        .about-info h2 {
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+
+        .about-info p {
+            margin: 2px 0;
+            font-size: 11px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 4px;
+            margin-top: 8px;
+        }
+
+        .social-btn {
+            padding: 4px 8px;
+            border: 2px solid;
+            border-color: var(--win-lighter) var(--win-darker) var(--win-darker) var(--win-lighter);
+            background: var(--win-bg);
+            cursor: pointer;
+            font-size: 10px;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .social-btn:hover {
+            background: var(--win-light);
+        }
+
+        .social-btn:active {
+            border-color: var(--win-darker) var(--win-lighter) var(--win-lighter) var(--win-darker);
+        }
+
+        /* Skills */
+        .skill-bar {
+            margin: 8px 0;
+        }
+
+        .skill-bar label {
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .skill-progress {
+            height: 16px;
+            background: #fff;
+            border: 2px solid;
+            border-color: var(--win-dark) var(--win-lighter) var(--win-lighter) var(--win-dark);
+            position: relative;
+        }
+
+        .skill-fill {
+            height: 100%;
+            background: linear-gradient(180deg, #000080, #0000aa);
+            transition: width 0.5s ease;
+        }
+
+        .skill-text {
+            position: absolute;
+            right: 4px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 10px;
+            color: #000;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 16px;
+            padding: 16px;
+        }
+
+        .project-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .project-item:hover {
+            background: rgba(0, 0, 128, 0.1);
+        }
+
+        .project-item img {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 4px;
+        }
+
+        .project-item span {
+            font-size: 11px;
+            word-wrap: break-word;
+        }
+
+        /* Tech Icons */
+        .tech-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 8px;
+        }
+
+        .tech-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        .tech-item:hover {
+            background: rgba(0, 0, 128, 0.1);
+        }
+
+        .tech-item img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .tech-item span {
+            font-size: 10px;
+            margin-top: 4px;
+        }
+
+        /* Tabs */
+        .tab-bar {
+            display: flex;
+            border-bottom: 1px solid var(--win-dark);
+            background: var(--win-bg);
+        }
+
+        .tab {
+            padding: 4px 12px;
+            cursor: pointer;
+            border: 1px solid transparent;
+            margin-bottom: -1px;
+        }
+
+        .tab.active {
+            background: #fff;
+            border: 1px solid var(--win-dark);
+            border-bottom-color: #fff;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 8px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* ============================================
+           ANIMATIONS
+           ============================================ */
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        .cursor-blink {
+            animation: blink 1s infinite;
+        }
+
+        @keyframes bootup {
+            0% { opacity: 0; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        .window.opening {
+            animation: bootup 0.15s ease-out;
+        }
+
+        /* Resize handle */
+        .resize-handle {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 16px;
+            height: 16px;
+            cursor: nwse-resize;
+            background: linear-gradient(135deg, transparent 50%, var(--win-dark) 50%, var(--win-dark) 60%, transparent 60%, transparent 70%, var(--win-dark) 70%, var(--win-dark) 80%, transparent 80%);
+        }
+
+        /* ============================================
+           BOOT SCREEN
+           ============================================ */
+
+        #boot-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            color: #c0c0c0;
+            font-family: 'Consolas', monospace;
+        }
+
+        #boot-screen.hidden {
+            display: none;
+        }
+
+        #boot-logo {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        #boot-text {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .loading-bar {
+            width: 300px;
+            height: 20px;
+            border: 2px solid #c0c0c0;
+            position: relative;
+        }
+
+        .loading-fill {
+            height: 100%;
+            background: #c0c0c0;
+            width: 0%;
+            transition: width 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <!-- Boot Screen -->
+    <div id="boot-screen">
+        <div id="boot-logo">🖥️</div>
+        <div id="boot-text">Starting Linh's Windows 95...</div>
+        <div class="loading-bar">
+            <div class="loading-fill" id="loading-fill"></div>
+        </div>
+    </div>
+
+    <!-- Desktop -->
+    <div id="desktop">
+        <!-- Desktop Icons -->
+        <div class="desktop-icon" data-window="about-window" ondblclick="openWindow('about-window')">
+            <img src="https://img.icons8.com/color/48/user-folder.png" alt="About Me">
+            <span class="icon-label">About Me</span>
+        </div>
+        <div class="desktop-icon" data-window="skills-window" ondblclick="openWindow('skills-window')">
+            <img src="https://img.icons8.com/color/48/console.png" alt="Skills">
+            <span class="icon-label">Skills.exe</span>
+        </div>
+        <div class="desktop-icon" data-window="projects-window" ondblclick="openWindow('projects-window')">
+            <img src="https://img.icons8.com/color/48/folder-tree.png" alt="Projects">
+            <span class="icon-label">My Projects</span>
+        </div>
+        <div class="desktop-icon" data-window="tech-window" ondblclick="openWindow('tech-window')">
+            <img src="https://img.icons8.com/color/48/toolbox.png" alt="Tech Stack">
+            <span class="icon-label">Tech Stack</span>
+        </div>
+        <div class="desktop-icon" onclick="window.open('https://github.com/LinhDangDev', '_blank')">
+            <img src="https://img.icons8.com/color/48/github.png" alt="GitHub">
+            <span class="icon-label">GitHub</span>
+        </div>
+        <div class="desktop-icon" onclick="window.open('https://www.linkedin.com/in/duylinh15723/', '_blank')">
+            <img src="https://img.icons8.com/color/48/linkedin.png" alt="LinkedIn">
+            <span class="icon-label">LinkedIn</span>
+        </div>
+        <div class="desktop-icon" onclick="window.open('mailto:duylinh05030723@gmail.com', '_blank')">
+            <img src="https://img.icons8.com/color/48/gmail-new.png" alt="Email">
+            <span class="icon-label">Email</span>
+        </div>
+        <div class="desktop-icon" data-window="notepad-window" ondblclick="openWindow('notepad-window')">
+            <img src="https://img.icons8.com/color/48/notepad.png" alt="Notepad">
+            <span class="icon-label">Notepad</span>
+        </div>
+    </div>
+
+    <!-- Windows -->
+
+    <!-- About Window -->
+    <div class="window" id="about-window" style="width: 450px; height: 350px; top: 50px; left: 100px;">
+        <div class="title-bar" onmousedown="startDrag(event, 'about-window')">
+            <span class="title-bar-text">
+                <img src="https://img.icons8.com/color/16/user-folder.png"> About Me
+            </span>
+            <div class="title-bar-controls">
+                <button onclick="minimizeWindow('about-window')">_</button>
+                <button onclick="maximizeWindow('about-window')">□</button>
+                <button onclick="closeWindow('about-window')">✕</button>
+            </div>
+        </div>
+        <div class="menu-bar">
+            <span class="menu-item">File</span>
+            <span class="menu-item">Edit</span>
+            <span class="menu-item">Help</span>
+        </div>
+        <div class="window-content">
+            <div class="about-section">
+                <div class="about-avatar">👨‍💻</div>
+                <div class="about-info">
+                    <h2>Đặng Duy Linh</h2>
+                    <p><strong>Role:</strong> Full-Stack Developer</p>
+                    <p><strong>Location:</strong> 📍 Ho Chi Minh City, Vietnam</p>
+                    <p><strong>Status:</strong> 🟢 Available for work</p>
+                    <div class="social-links">
+                        <a href="https://github.com/LinhDangDev" target="_blank" class="social-btn">GitHub</a>
+                        <a href="https://www.linkedin.com/in/duylinh15723/" target="_blank" class="social-btn">LinkedIn</a>
+                        <a href="https://t.me/linhdangdev15723" target="_blank" class="social-btn">Telegram</a>
+                        <a href="mailto:duylinh05030723@gmail.com" class="social-btn">Email</a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p style="margin-top: 8px; line-height: 1.5;">
+                <strong>About:</strong><br>
+                Passionate developer crafting digital experiences. From backend systems to beautiful frontends.
+                Always learning, always building. 🚀
+            </p>
+        </div>
+        <div class="status-bar">
+            <span class="status-bar-field">Ready</span>
+        </div>
+        <div class="resize-handle" onmousedown="startResize(event, 'about-window')"></div>
+    </div>
+
+    <!-- Skills Window (Command Prompt Style) -->
+    <div class="window" id="skills-window" style="width: 550px; height: 380px; top: 80px; left: 150px;">
+        <div class="title-bar" onmousedown="startDrag(event, 'skills-window')">
+            <span class="title-bar-text">
+                <img src="https://img.icons8.com/color/16/console.png"> C:\Skills\> - Command Prompt
+            </span>
+            <div class="title-bar-controls">
+                <button onclick="minimizeWindow('skills-window')">_</button>
+                <button onclick="maximizeWindow('skills-window')">□</button>
+                <button onclick="closeWindow('skills-window')">✕</button>
+            </div>
+        </div>
+        <div class="window-content black" id="cmd-content">
+            <div id="cmd-output"></div>
+            <div style="display: flex;">
+                <span>C:\Users\Linh&gt;&nbsp;</span>
+                <span id="cmd-cursor" class="cursor-blink">█</span>
+            </div>
+        </div>
+        <div class="resize-handle" onmousedown="startResize(event, 'skills-window')"></div>
+    </div>
+
+    <!-- Projects Window -->
+    <div class="window" id="projects-window" style="width: 500px; height: 400px; top: 60px; left: 200px;">
+        <div class="title-bar" onmousedown="startDrag(event, 'projects-window')">
+            <span class="title-bar-text">
+                <img src="https://img.icons8.com/color/16/folder-tree.png"> My Projects - Windows Explorer
+            </span>
+            <div class="title-bar-controls">
+                <button onclick="minimizeWindow('projects-window')">_</button>
+                <button onclick="maximizeWindow('projects-window')">□</button>
+                <button onclick="closeWindow('projects-window')">✕</button>
+            </div>
+        </div>
+        <div class="menu-bar">
+            <span class="menu-item">File</span>
+            <span class="menu-item">Edit</span>
+            <span class="menu-item">View</span>
+            <span class="menu-item">Help</span>
+        </div>
+        <div class="window-content gray">
+            <div class="projects-grid">
+                <div class="project-item" onclick="window.open('https://github.com/LinhDangDev/Music_Streaming_Platform', '_blank')">
+                    <img src="https://img.icons8.com/color/48/music.png" alt="Music">
+                    <span>🎵 Music Platform<br><small>Dart/Flutter</small></span>
+                </div>
+                <div class="project-item" onclick="window.open('https://github.com/LinhDangDev/Exam-Management-System', '_blank')">
+                    <img src="https://img.icons8.com/color/48/test-passed.png" alt="Exam">
+                    <span>📝 Exam System<br><small>C# / .NET</small></span>
+                </div>
+                <div class="project-item" onclick="window.open('https://github.com/LinhDangDev/livestreaming', '_blank')">
+                    <img src="https://img.icons8.com/color/48/video.png" alt="Stream">
+                    <span>📺 Livestream<br><small>JavaScript</small></span>
+                </div>
+                <div class="project-item" onclick="window.open('https://github.com/LinhDangDev/build-games-with-amazon-q-cli-line98-icon-aws', '_blank')">
+                    <img src="https://img.icons8.com/color/48/controller.png" alt="Games">
+                    <span>🎮 AWS Games<br><small>TypeScript</small></span>
+                </div>
+                <div class="project-item" onclick="window.open('https://github.com/LinhDangDev?tab=repositories', '_blank')">
+                    <img src="https://img.icons8.com/color/48/opened-folder.png" alt="More">
+                    <span>📂 View All<br><small>37 Repos</small></span>
+                </div>
+            </div>
+        </div>
+        <div class="status-bar">
+            <span class="status-bar-field">5 object(s)</span>
+        </div>
+        <div class="resize-handle" onmousedown="startResize(event, 'projects-window')"></div>
+    </div>
+
+    <!-- Tech Stack Window -->
+    <div class="window" id="tech-window" style="width: 550px; height: 420px; top: 70px; left: 180px;">
+        <div class="title-bar" onmousedown="startDrag(event, 'tech-window')">
+            <span class="title-bar-text">
+                <img src="https://img.icons8.com/color/16/toolbox.png"> Tech Stack - Control Panel
+            </span>
+            <div class="title-bar-controls">
+                <button onclick="minimizeWindow('tech-window')">_</button>
+                <button onclick="maximizeWindow('tech-window')">□</button>
+                <button onclick="closeWindow('tech-window')">✕</button>
+            </div>
+        </div>
+        <div class="tab-bar">
+            <div class="tab active" onclick="switchTab(this, 'tab-languages')">Languages</div>
+            <div class="tab" onclick="switchTab(this, 'tab-frontend')">Frontend</div>
+            <div class="tab" onclick="switchTab(this, 'tab-backend')">Backend</div>
+            <div class="tab" onclick="switchTab(this, 'tab-tools')">Tools</div>
+        </div>
+        <div class="window-content gray" style="border: none; margin: 0;">
+            <div id="tab-languages" class="tab-content active">
+                <div class="tech-grid">
+                    <div class="tech-item"><img src="https://skillicons.dev/icons?i=js"><span>JavaScript</span></div>
+                    <div class="tech-item"><img src="https://skillicons.dev/icons?i=ts"><span>TypeScript</span></div>
+                    <div class="tech-item"><img src="https://skillicons.dev/icons?i=java"><span>Java</span></div>
+                    <div class="tech-item"><img src="https://skillicons.dev/icons?i=cs"><span>C#</span></div>
+                    <div class="tech-item"><img src="https://skillicons.dev/icons?i=dart"><span>Dart</span></div>
+                    <div class="tech-item"><img src="https://skillicons.dev/icons?i=py"><span>Python</span></div>
+                </div>
+            </div>
+            <div id="tab-frontend" class="tab-content">
+                <div class="tech-grid">
+                    <div class="tech-item"><img src="https://skillicons.dev/icons?i=react"><span>React</span></div>
+                    <div class="tech-item"><img src="https://skillicons.dev/icons?i=nextjs"><span>Next.js</span></div>
+                    <div class="tech-item"><img src="https://skillicons.dev/icons?i=html"><span>HTML5</span></div>
+                    <div class="tech-item"><img src="https://skillicons.dev/icons?i=css"><span>CSS3</span></div>
+                    <div class="tech-item"><img src="https://skillicons.dev/icons?i=tailwind"><span>Tailwind</span></div>
+                    <div class="tech-item"><img src="https://skillicons.dev/icons?i=sass"><span>Sass</span></div>
+                </div>
+            </div>
+            <div id="tab-backend" class="tab-content">
+                <div class="tech-grid">
+                    <div class="tech-item"><img src="https://skillicons.dev/icons?i=nodejs"><span>Node.js</span></div>
+                    <div class="tech-item"><img src="https://skillicons.dev/icons?i=dotnet"><span>.NET</span></div>
+                    <div class="tech-item"><img src="https://skillicons.dev/icons?i=spring"><span>Spring</span></div>
+                    <div class="tech-item"><img src="https://skillicons.dev/icons?i=nestjs"><span>NestJS</span></div>
+                    <div class="tech-item"><img src="https://skillicons.dev/icons?i=mysql"><span>MySQL</span></div>
+                    <div class="tech-item"><img src="https://skillicons.dev/icons?i=mongodb"><span>MongoDB</span></div>
+                </div>
+            </div>
+            <div id="tab-tools" class="tab-content">
+                <div class="tech-grid">
+                    <div class="tech-item"><img src="https://skillicons.dev/icons?i=docker"><span>Docker</span></div>
+                    <div class="tech-item"><img src="https://skillicons.dev/icons?i=git"><span>Git</span></div>
+                    <div class="tech-item"><img src="https://skillicons.dev/icons?i=github"><span>GitHub</span></div>
+                    <div class="tech-item"><img src="https://skillicons.dev/icons?i=vscode"><span>VS Code</span></div>
+                    <div class="tech-item"><img src="https://skillicons.dev/icons?i=postman"><span>Postman</span></div>
+                    <div class="tech-item"><img src="https://skillicons.dev/icons?i=figma"><span>Figma</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="resize-handle" onmousedown="startResize(event, 'tech-window')"></div>
+    </div>
+
+    <!-- Notepad Window -->
+    <div class="window" id="notepad-window" style="width: 400px; height: 300px; top: 100px; left: 250px;">
+        <div class="title-bar" onmousedown="startDrag(event, 'notepad-window')">
+            <span class="title-bar-text">
+                <img src="https://img.icons8.com/color/16/notepad.png"> welcome.txt - Notepad
+            </span>
+            <div class="title-bar-controls">
+                <button onclick="minimizeWindow('notepad-window')">_</button>
+                <button onclick="maximizeWindow('notepad-window')">□</button>
+                <button onclick="closeWindow('notepad-window')">✕</button>
+            </div>
+        </div>
+        <div class="menu-bar">
+            <span class="menu-item">File</span>
+            <span class="menu-item">Edit</span>
+            <span class="menu-item">Format</span>
+            <span class="menu-item">Help</span>
+        </div>
+        <div class="window-content" style="padding: 4px;">
+            <textarea style="width: 100%; height: 100%; border: none; resize: none; font-family: 'Consolas', monospace; font-size: 12px;" spellcheck="false">
+Welcome to Linh's Windows 95 Desktop! 🖥️
+
+Double-click the icons on the desktop to explore:
+
+📁 About Me - Learn more about me
+💻 Skills.exe - View my technical skills
+📂 My Projects - Browse my projects
+🔧 Tech Stack - Technologies I use
+
+Feel free to drag windows around,
+minimize, maximize, or close them!
+
+Thanks for visiting!
+Let's build something amazing together! 🚀
+
+- Linh
+            </textarea>
+        </div>
+        <div class="resize-handle" onmousedown="startResize(event, 'notepad-window')"></div>
+    </div>
+
+    <!-- Start Menu -->
+    <div id="start-menu">
+        <div class="start-menu-sidebar">
+            <span>Linh95</span>
+        </div>
+        <div class="start-menu-items">
+            <div class="start-menu-item" onclick="openWindow('about-window'); toggleStartMenu();">
+                <img src="https://img.icons8.com/color/32/user-folder.png">
+                <span>About Me</span>
+            </div>
+            <div class="start-menu-item" onclick="openWindow('skills-window'); toggleStartMenu();">
+                <img src="https://img.icons8.com/color/32/console.png">
+                <span>Skills</span>
+            </div>
+            <div class="start-menu-item" onclick="openWindow('projects-window'); toggleStartMenu();">
+                <img src="https://img.icons8.com/color/32/folder-tree.png">
+                <span>My Projects</span>
+            </div>
+            <div class="start-menu-item" onclick="openWindow('tech-window'); toggleStartMenu();">
+                <img src="https://img.icons8.com/color/32/toolbox.png">
+                <span>Tech Stack</span>
+            </div>
+            <div class="start-menu-divider"></div>
+            <div class="start-menu-item" onclick="window.open('https://github.com/LinhDangDev', '_blank'); toggleStartMenu();">
+                <img src="https://img.icons8.com/color/32/github.png">
+                <span>GitHub</span>
+            </div>
+            <div class="start-menu-item" onclick="window.open('https://www.linkedin.com/in/duylinh15723/', '_blank'); toggleStartMenu();">
+                <img src="https://img.icons8.com/color/32/linkedin.png">
+                <span>LinkedIn</span>
+            </div>
+            <div class="start-menu-divider"></div>
+            <div class="start-menu-item" onclick="shutDown()">
+                <img src="https://img.icons8.com/color/32/shutdown.png">
+                <span>Shut Down...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Taskbar -->
+    <div id="taskbar">
+        <button id="start-button" onclick="toggleStartMenu()">
+            <img src="https://img.icons8.com/color/16/windows-95.png" alt="Start">
+            <span>Start</span>
+        </button>
+        <div id="taskbar-windows"></div>
+        <div id="system-tray">
+            <span>🔊</span>
+            <span id="clock">00:00</span>
+        </div>
+    </div>
+
+    <script>
+        // ============================================
+        // BOOT SEQUENCE
+        // ============================================
+
+        window.onload = function() {
+            const loadingFill = document.getElementById('loading-fill');
+            const bootScreen = document.getElementById('boot-screen');
+
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += Math.random() * 15;
+                if (progress >= 100) {
+                    progress = 100;
+                    clearInterval(interval);
+                    setTimeout(() => {
+                        bootScreen.classList.add('hidden');
+                        // Open welcome notepad
+                        setTimeout(() => openWindow('notepad-window'), 300);
+                    }, 500);
+                }
+                loadingFill.style.width = progress + '%';
+            }, 200);
+
+            // Start clock
+            updateClock();
+            setInterval(updateClock, 1000);
+        };
+
+        function updateClock() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            document.getElementById('clock').textContent = hours + ':' + minutes;
+        }
+
+        // ============================================
+        // WINDOW MANAGEMENT
+        // ============================================
+
+        let activeWindow = null;
+        let zIndex = 100;
+        const openWindows = new Set();
+        const windowStates = {};
+
+        function openWindow(windowId) {
+            const win = document.getElementById(windowId);
+            if (!win) return;
+
+            win.style.display = 'flex';
+            win.classList.add('opening');
+            setTimeout(() => win.classList.remove('opening'), 150);
+
+            setActiveWindow(windowId);
+            openWindows.add(windowId);
+            updateTaskbar();
+
+            // Run CMD animation for skills window
+            if (windowId === 'skills-window' && !windowStates[windowId]?.cmdRun) {
+                runCmdAnimation();
+                windowStates[windowId] = { cmdRun: true };
+            }
+        }
+
+        function closeWindow(windowId) {
+            const win = document.getElementById(windowId);
+            if (!win) return;
+
+            win.style.display = 'none';
+            openWindows.delete(windowId);
+            updateTaskbar();
+
+            if (activeWindow === windowId) {
+                activeWindow = null;
+                // Activate next window
+                const remaining = Array.from(openWindows);
+                if (remaining.length > 0) {
+                    setActiveWindow(remaining[remaining.length - 1]);
+                }
+            }
+        }
+
+        function minimizeWindow(windowId) {
+            const win = document.getElementById(windowId);
+            if (!win) return;
+
+            win.style.display = 'none';
+            updateTaskbar();
+        }
+
+        function maximizeWindow(windowId) {
+            const win = document.getElementById(windowId);
+            if (!win) return;
+
+            if (windowStates[windowId]?.maximized) {
+                // Restore
+                win.style.top = windowStates[windowId].prevTop;
+                win.style.left = windowStates[windowId].prevLeft;
+                win.style.width = windowStates[windowId].prevWidth;
+                win.style.height = windowStates[windowId].prevHeight;
+                windowStates[windowId].maximized = false;
+            } else {
+                // Maximize
+                windowStates[windowId] = {
+                    ...windowStates[windowId],
+                    maximized: true,
+                    prevTop: win.style.top,
+                    prevLeft: win.style.left,
+                    prevWidth: win.style.width,
+                    prevHeight: win.style.height
+                };
+                win.style.top = '0';
+                win.style.left = '0';
+                win.style.width = '100%';
+                win.style.height = 'calc(100vh - 28px)';
+            }
+        }
+
+        function setActiveWindow(windowId) {
+            // Deactivate all
+            document.querySelectorAll('.window').forEach(w => w.classList.remove('active'));
+            document.querySelectorAll('.taskbar-button').forEach(b => b.classList.remove('active'));
+
+            // Activate this one
+            const win = document.getElementById(windowId);
+            if (win) {
+                win.classList.add('active');
+                win.style.zIndex = ++zIndex;
+                activeWindow = windowId;
+            }
+
+            updateTaskbar();
+        }
+
+        function updateTaskbar() {
+            const container = document.getElementById('taskbar-windows');
+            container.innerHTML = '';
+
+            openWindows.forEach(windowId => {
+                const win = document.getElementById(windowId);
+                if (!win) return;
+
+                const titleText = win.querySelector('.title-bar-text');
+                const icon = titleText.querySelector('img')?.src || '';
+                const text = titleText.textContent.trim();
+
+                const btn = document.createElement('button');
+                btn.className = 'taskbar-button' + (activeWindow === windowId ? ' active' : '');
+                btn.innerHTML = `<img src="${icon}" alt=""> <span>${text}</span>`;
+                btn.onclick = () => {
+                    const w = document.getElementById(windowId);
+                    if (w.style.display === 'none') {
+                        w.style.display = 'flex';
+                    }
+                    setActiveWindow(windowId);
+                };
+                container.appendChild(btn);
+            });
+        }
+
+        // ============================================
+        // DRAG & RESIZE
+        // ============================================
+
+        let dragState = null;
+        let resizeState = null;
+
+        function startDrag(e, windowId) {
+            if (e.target.tagName === 'BUTTON') return;
+
+            const win = document.getElementById(windowId);
+            setActiveWindow(windowId);
+
+            dragState = {
+                windowId,
+                startX: e.clientX,
+                startY: e.clientY,
+                startLeft: win.offsetLeft,
+                startTop: win.offsetTop
+            };
+
+            document.addEventListener('mousemove', onDrag);
+            document.addEventListener('mouseup', stopDrag);
+        }
+
+        function onDrag(e) {
+            if (!dragState) return;
+
+            const win = document.getElementById(dragState.windowId);
+            const dx = e.clientX - dragState.startX;
+            const dy = e.clientY - dragState.startY;
+
+            win.style.left = (dragState.startLeft + dx) + 'px';
+            win.style.top = (dragState.startTop + dy) + 'px';
+        }
+
+        function stopDrag() {
+            dragState = null;
+            document.removeEventListener('mousemove', onDrag);
+            document.removeEventListener('mouseup', stopDrag);
+        }
+
+        function startResize(e, windowId) {
+            e.stopPropagation();
+            const win = document.getElementById(windowId);
+
+            resizeState = {
+                windowId,
+                startX: e.clientX,
+                startY: e.clientY,
+                startWidth: win.offsetWidth,
+                startHeight: win.offsetHeight
+            };
+
+            document.addEventListener('mousemove', onResize);
+            document.addEventListener('mouseup', stopResize);
+        }
+
+        function onResize(e) {
+            if (!resizeState) return;
+
+            const win = document.getElementById(resizeState.windowId);
+            const dx = e.clientX - resizeState.startX;
+            const dy = e.clientY - resizeState.startY;
+
+            win.style.width = Math.max(200, resizeState.startWidth + dx) + 'px';
+            win.style.height = Math.max(100, resizeState.startHeight + dy) + 'px';
+        }
+
+        function stopResize() {
+            resizeState = null;
+            document.removeEventListener('mousemove', onResize);
+            document.removeEventListener('mouseup', stopResize);
+        }
+
+        // ============================================
+        // START MENU
+        // ============================================
+
+        function toggleStartMenu() {
+            const menu = document.getElementById('start-menu');
+            const btn = document.getElementById('start-button');
+            menu.classList.toggle('show');
+            btn.classList.toggle('active');
+        }
+
+        // Close start menu when clicking elsewhere
+        document.addEventListener('click', (e) => {
+            const menu = document.getElementById('start-menu');
+            const btn = document.getElementById('start-button');
+            if (!menu.contains(e.target) && !btn.contains(e.target)) {
+                menu.classList.remove('show');
+                btn.classList.remove('active');
+            }
+        });
+
+        // ============================================
+        // DESKTOP ICONS
+        // ============================================
+
+        document.querySelectorAll('.desktop-icon').forEach(icon => {
+            icon.addEventListener('click', function(e) {
+                document.querySelectorAll('.desktop-icon').forEach(i => i.classList.remove('selected'));
+                this.classList.add('selected');
+            });
+        });
+
+        document.getElementById('desktop').addEventListener('click', function(e) {
+            if (e.target === this) {
+                document.querySelectorAll('.desktop-icon').forEach(i => i.classList.remove('selected'));
+            }
+        });
+
+        // ============================================
+        // CMD ANIMATION
+        // ============================================
+
+        function runCmdAnimation() {
+            const output = document.getElementById('cmd-output');
+            const lines = [
+                'Microsoft(R) Windows 95',
+                '(C) Copyright Linh Dev Corp 1995-2025.',
+                '',
+                'C:\\Users\\Linh> skills --list',
+                '',
+                'Loading skills database...',
+                '',
+                '┌────────────────────────────────────────────────────┐',
+                '│ SKILL            LEVEL          PROFICIENCY       │',
+                '├────────────────────────────────────────────────────┤',
+                '│ Frontend         ████████████████████░░   90%     │',
+                '│ Backend          ███████████████████░░░   85%     │',
+                '│ Database         ████████████████░░░░░░   75%     │',
+                '│ Mobile           ██████████████░░░░░░░░   70%     │',
+                '│ DevOps           ███████████░░░░░░░░░░░   55%     │',
+                '└────────────────────────────────────────────────────┘',
+                '',
+            ];
+
+            output.innerHTML = '';
+            let lineIndex = 0;
+
+            function typeLine() {
+                if (lineIndex >= lines.length) return;
+
+                const line = lines[lineIndex];
+                output.innerHTML += line + '<br>';
+                output.scrollTop = output.scrollHeight;
+                lineIndex++;
+
+                setTimeout(typeLine, line === '' ? 100 : 50);
+            }
+
+            setTimeout(typeLine, 500);
+        }
+
+        // ============================================
+        // TABS
+        // ============================================
+
+        function switchTab(tabElement, contentId) {
+            const parent = tabElement.closest('.window');
+            parent.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            parent.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+
+            tabElement.classList.add('active');
+            document.getElementById(contentId).classList.add('active');
+        }
+
+        // ============================================
+        // SHUTDOWN
+        // ============================================
+
+        function shutDown() {
+            toggleStartMenu();
+            document.body.innerHTML = `
+                <div style="
+                    position: fixed;
+                    top: 0; left: 0; right: 0; bottom: 0;
+                    background: #000;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    color: #ff6600;
+                    font-family: 'MS Sans Serif', Tahoma, sans-serif;
+                    font-size: 24px;
+                ">
+                    <div style="margin-bottom: 20px;">🖥️</div>
+                    <div>It's now safe to turn off your computer.</div>
+                    <div style="margin-top: 20px; font-size: 14px; color: #808080;">
+                        <a href="https://github.com/LinhDangDev" style="color: #808080;">Visit GitHub</a> |
+                        <a href="#" onclick="location.reload()" style="color: #808080;">Restart</a>
+                    </div>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
