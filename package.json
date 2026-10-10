@@ -1,0 +1,30 @@
+{
+  "name": "profile-gihub",
+  "version": "1.0.0",
+  "description": "LinhDangDev profile README assets, generator and local preview",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "gen:banner": "node tools/generate-banner.mjs",
+    "gen:portrait": "py -3.11 tools/build-portrait.py",
+    "preview": "node tools/serve.mjs 4173",
+    "test": "playwright test",
+    "test:headed": "playwright test --headed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LinhDangDev/LinhDangDev.git"
+  },
+  "keywords": [],
+  "author": "LinhDangDev",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/LinhDangDev/LinhDangDev/issues"
+  },
+  "homepage": "https://github.com/LinhDangDev/LinhDangDev#readme",
+  "devDependencies": {
+    "@playwright/test": "1.63.0"
+  }
+}

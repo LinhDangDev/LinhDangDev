@@ -1,3 +1,10 @@
-plans/
-.claude
+node_modules/
+.ref/
+.omp/
+.claude/
+playwright-report/
+tests/screenshots/
+tests/test-results/
+tools/__pycache__/
+nul
 .vercel
